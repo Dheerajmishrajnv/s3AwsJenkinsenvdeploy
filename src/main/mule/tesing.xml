@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<configuration-properties doc:name="Configuration properties" doc:id="ff4d88e5-355d-4274-8c3e-1b4e3be03519" file="mule-${env}.properties" />
+	<global-property doc:name="Global Property" doc:id="f8a4f1e5-10e7-49cc-b6a7-493187c556e5" name="env" value="local" />
+	<flow name="tesingFlow" doc:id="ebeb9ba5-b354-4de6-97a3-9fcf3399d9bf" >
+		<http:listener doc:name="Listener" doc:id="e4161c4b-4a6e-4d85-b904-ac5e4247156e" config-ref="HTTP_Listener_config" path="/test1"/>
+		<set-payload value="${db.name}" doc:name="Set Payload" doc:id="b4063dd0-0e50-42eb-be6d-45583d059bfb" />
+		<logger level="INFO" doc:name="Logger" doc:id="cd81c36a-de54-4eaf-b318-600bc700288c" />
+	</flow>
+</mule>
