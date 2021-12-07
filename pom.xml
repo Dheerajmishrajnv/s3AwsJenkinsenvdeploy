@@ -42,7 +42,7 @@
 						<username>${anypoint.username}</username>
 						<password>${anypoint.password}</password>
 						<applicationName>${appname}</applicationName>
-						<environment>${env}</environment>
+						<environment>${envr}</environment>
 						<workerType>${worker}</workerType>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
